@@ -46,7 +46,9 @@ var feedr = new Feedr({
 feedr.on("connect", function(client) {
     util.log("+C " + client.id + " [" + feedr.clientsCount + "]");
     
-    
+    client.on("disconnect", function(reason) {
+        util.log("-C " + client. id + " [" + feedr.clientsCount + "] reason: " + reason);
+    });
 });
 
 // initialize feedr server
