@@ -1,7 +1,7 @@
 var http = require("http");
     util = require("util"),
     fs = require("fs"),
-    Feedr = require("../../lib/Feedr");
+    Feedr = require("../../lib/server/Feedr");
 
 var httpServer = http.createServer(function(req, res) {
     /*if (req.headers.accept && req.headers.accept == 'text/event-stream') {
