@@ -5,7 +5,26 @@ $(document).ready(function() {
         $("#debug").append(
             "MSG " + 
             (new Date()).toLocaleTimeString() + " " +
-            e.data + "<br>"
+            e.data + "<br />"
         );
     };
+    
+    source.onerror = function(e) {
+        $("#debug").append(
+            "ERROR " + 
+            (new Date()).toLocaleTimeString() + " " +
+            JSON.stringify(e) + "<br />"
+        );
+    };
+    
+    //$('#debug').load("http://rt01.developmententity.sk:8080/text");
 });
+
+/*var feedr = (function(undefined) {
+    
+    
+    
+    return {
+		
+	}
+}());*/
