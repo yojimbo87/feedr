@@ -43,10 +43,6 @@ feedr.on("connect", function(client) {
     util.log("+C " + client.id + " [" + feedr.clientsCount + "]");
     
     setInterval(function() {  
-        feedr.send(client.id, 25000, "retry");
-    }, 25000);
-    
-    setInterval(function() {  
         feedr.send(client.id, "loooong interval");
     }, 150000);
     
