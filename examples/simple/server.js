@@ -19,6 +19,11 @@ var httpServer = http.createServer(function(req, res) {
             res.write(fs.readFileSync(__dirname + '/client.js'));
             res.end();
             break;
+        case "/feedr.js":
+            res.writeHead(200, {'Content-Type': 'text/javascript'});
+            res.write(fs.readFileSync('../../lib/client/feedr.js'));
+            res.end();
+            break;
         /*case "/text":
             res.writeHead(200, {'Content-Type': 'text/plain', "Access-Control-Allow-Origin": "*"});
             res.write("text other domain");
