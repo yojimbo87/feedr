@@ -6,7 +6,7 @@ Node.js based server for Server-Sent Events. Currently WIP.
 TODO
 ====
 
- * client side wrapper
+ * client - basic API - connect, on, send
  * client - sending messages
  * server - receiving messages
  * events
