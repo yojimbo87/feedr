@@ -25,7 +25,12 @@ $(document).ready(function() {
         );
     });
     
-    feedr.connect({});
+    feedr.connect({
+        hostname: "http://master.developmententity.sk:8080/"
+    });
+    
+    //feedr.send("{\"foo\": \"bar\", \"inner\": {\"xxx\": \"yyy\"}}");
+    feedr.send({foo: "bar", inner: {xxx: "yyy"}});
     
     //$('#debug').load("http://rt01.developmententity.sk:8080/text");
 });

@@ -39,8 +39,7 @@ util.log("Running on 8080");
 
 // set up feedr with settings
 var feedr = new Feedr({
-	server: httpServer,
-    eventSourceName: "events"
+	server: httpServer
 });
 
 // client connects to server
